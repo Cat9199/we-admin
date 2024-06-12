@@ -5,6 +5,7 @@ import MobilMenu from "./components/MobilMenu";
 import MainMenu from "./components/MainMenu";
 import { useState } from "react";
 import ReactShortcut from "react-shortcut";
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   const screenWidth = window.innerWidth;
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ function App() {
         }    w-full  bg-gray transition-all duration-300 ease-out `}
       >
         <MainMenu openMenu={setOpenMenu} />
+        <Analytics />
       </div>
       {/* main content */}
       <div
